@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ambre Del Boccio - Portfolio</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Sticky CSS Pure -->
+    <nav class="sticky-nav">
+        <a href="#home" class="nav-logo">AMBRE</a>
+        <div class="nav-links">
+            <a href="#about">ABOUT</a>
+            <a href="#parcours">PARCOURS</a>
+            <a href="#competences">COMPÉTENCES</a>
+            <a href="#projets">PROJETS</a>
+            <a href="#contact">CONTACT</a>
+        </div>
+    </nav>
+    
+    
+    <!-- Particules -->
+    <div class="particles" id="particles"></div>
+
+    <!-- Lecteur audio -->
+    <div class="audio-player">
+        <div class="audio-controls">
+            <button class="play-btn" id="playBtn">▶</button>
+            <button class="volume-btn" id="volumeBtn">🔊</button>
+            <div class="volume-control" id="volumeControl">
+                <div class="volume-bar" id="volumeBar"></div>
+            </div>
+        </div>
+        <audio id="bgMusic" loop preload="auto">
+            <source src="Bleu-Azur.mp3" type="audio/mpeg">
+            Votre navigateur ne supporte pas l'audio HTML5.
+        </audio>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background"></div>
+        <div class="top-logo">MMI</div>
+        <div class="hero-nav">
+            <div class="hero-logo">
+                <h1>PORTFOLIO</h1>
+                <p>GRAPHISME/AUDIOVISUEL</p>
+            </div>
+            <div class="nav-grid">
+                <a href="#about" class="nav-item"><span>ABOUT<br>ME</span></a>
+                <a href="#parcours" class="nav-item"><span>MON<br>PARCOURS</span></a>
+                <a href="#competences" class="nav-item"><span>MES<br>COMPÉTENCES</span></a>
+                <a href="#projets" class="nav-item"><span>MES<br>PROJETS</span></a>
+                <a href="#contact" class="nav-item"><span>ME<br>CONTACTER</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <h2 class="section-title">ABOUT ME</h2>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="ambrephoto.png" alt="Ambre Del Boccio">
+            </div>
+            <div class="about-cards">
+                <div class="about-card">
+                    <strong>Ambre Del Boccio</strong>
+                </div>
+                <div class="about-card">
+                    <strong>20</strong><br>ans
+                </div>
+                <div class="about-card">
+                    <strong>Graphisme</strong> /<br>
+                    <strong>Communication</strong> /<br>
+                    <strong>Audiovisuel</strong>
+                </div>
+                <div class="about-card large">
+                    Je suis étudiante en<br><strong>BUT MMI</strong>
+                </div>
+                <div class="about-keywords">
+                    <span class="keyword">Curieuse</span>
+                    <span class="keyword">Créative</span>
+                    <span class="keyword">Esprit d'équipe</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parcours Section -->
+    <section class="section" id="parcours">
+        <h2 class="section-title">MON PARCOURS</h2>
+        <div class="parcours-timeline">
+            <div class="timeline-circle purple-dark">
+                <div class="timeline-date">2021<br>-<br>2024</div>
+                <div class="timeline-text">
+                    Lycée Jean Paul de Rocca Serra<br>
+                    Spécialisation Cinéma Audiovisuel et LLCER
+                </div>
+            </div>
+            <div class="timeline-circle purple-medium">
+                <div class="timeline-date">2024<br>-<br>2025</div>
+                <div class="timeline-text">
+                    Stage en montage vidéo, communication et graphisme
+                </div>
+            </div>
+            <div class="timeline-circle purple-light">
+                <div class="timeline-date">2025<br>-<br>......</div>
+                <div class="timeline-text">
+                    BUT Métier du Multimédia et de l'Internet
+                </div>
+            </div>
+            <div class="timeline-circle gray">
+                <div class="timeline-date"><br>À SUIVRE...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section class="section" id="competences">
+        <h2 class="section-title">MES COMPÉTENCES</h2>
+        <div class="skills-grid">
+            <div class="skill-badge">
+                <div class="skill-info">
+                    <h3>PHOTOSHOP</h3>
+                    <div class="skill-stars">★★★☆☆</div>
+                </div>
+                <div class="skill-icon"><img src="photoshop.png" alt="Photoshop"></div>
+            </div>
+            <div class="skill-badge">
+                <div class="skill-info">
+                    <h3>PREMIÈRE PRO</h3>
+                    <div class="skill-stars">★★★★☆</div>
+                </div>
+                <div class="skill-icon"><img src="premierepro.svg.png" alt="Première Pro"></div>
+            </div>
+            <div class="skill-badge">
+                <div class="skill-info">
+                    <h3>ILLUSTRATOR</h3>
+                    <div class="skill-stars">★★★☆☆</div>
+                </div>
+                <div class="skill-icon"><img src="Illustrator.png" alt="Illustrator"></div>
+            </div>
+            <div class="skill-badge">
+                <div class="skill-info">
+                    <h3>HTML</h3>
+                    <div class="skill-stars">★★★★☆</div>
+                </div>
+                <div class="skill-icon"><img src="HTML.png" alt="HTML"></div>
+            </div>
+            <div class="skill-badge">
+                <div class="skill-info">
+                    <h3>CSS</h3>
+                    <div class="skill-stars">★★★★☆</div>
+                </div>
+                <div class="skill-icon"><img src="CSS.png" alt="CSS"></div>
+            </div>
+            <div class="skill-badge">
+                <div class="skill-info">
+                    <h3>VISUAL CODE</h3>
+                    <div class="skill-stars">★★★☆☆</div>
+                </div>
+                <div class="skill-icon"><img src="visualcode.png" alt="Visual Studio Code"></div>
+            </div>
+            <div class="skill-badge">
+                <div class="skill-info">
+                    <h3>FIGMA</h3>
+                    <div class="skill-stars">★★★★☆</div>
+                </div>
+                <div class="skill-icon"><img src="figma.svg" alt="Figma"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Section -->
+    <section class="section" id="projets">
+        <h2 class="section-title">MES PROJETS</h2>
+        <div class="projects-grid">
+            <div class="project-card" data-project="plan">
+                <div class="project-image with-bg-image" style="background-image: url('plandestaches.png')">
+                    <span>PLAN DES<br>TÂCHES</span>
+                </div>
+                <div class="project-overlay">
+                    <div class="project-title">PLAN DES TÂCHES</div>
+                    <div class="project-subtitle">GESTION DE PROJET</div>
+                </div>
+            </div>
+            <div class="project-card" data-project="halo">
+                <div class="project-image with-bg-image" style="background-image: url('halo.png')">
+                    <span>HALO</span>
+                </div>
+                <div class="project-overlay">
+                    <div class="project-title">HALO</div>
+                    <div class="project-subtitle">CULTURE ARTISTIQUE</div>
+                </div>
+            </div>
+            <div class="project-card" data-project="creator">
+                <div class="project-image with-bg-image" style="background-image: url('creator.png')">
+                    <span>CREATOR</span>
+                </div>
+                <div class="project-overlay">
+                    <div class="project-title">CREATOR HIGHLIGHTS</div>
+                    <div class="project-subtitle">INTÉGRATION</div>
+                </div>
+            </div>
+            <div class="project-card" data-project="joyca">
+                <div class="project-image with-bg-image" style="background-image: url('joyca.png')">
+                    <span>JOYCA</span>
+                </div>
+                <div class="project-overlay">
+                    <div class="project-title">JOYCA</div>
+                    <div class="project-subtitle">CULTURE ARTISTIQUE</div>
+                </div>
+            </div>
+            <div class="project-card" data-project="cgw">
+                <div class="project-image with-bg-image" style="background-image: url('cgw.png')">
+                    <span>CGW</span>
+                </div>
+                <div class="project-overlay">
+                    <div class="project-title">CGW</div>
+                    <div class="project-subtitle">CULTURE ARTISTIQUE</div>
+                </div>
+            </div>
+            <div class="project-card" data-project="f2f">
+                <div class="project-image with-bg-image" style="background-image: url('F2F.png')">
+                    <span>FACE 2 FACE</span>
+                </div>
+                <div class="project-overlay">
+                    <div class="project-title">FACE 2 FACE</div>
+                    <div class="project-subtitle">IDENTITÉ VISUELLE</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pages de détails des projets -->
+    <div class="project-detail" id="detail-plan">
+        <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
+        <h2 class="section-title visible">PLAN DES TÂCHES - GESTION DE PROJET</h2>
+        <div class="project-detail-content">
+            <img src="plandestaches.png" alt="Plan des tâches" class="project-detail-image">
+            <div class="project-detail-info">
+                <h2>Plan des tâches</h2>
+                <p>Ce plan des tâches a été élaboré dans le cadre d'une SAE "Gérer un projet de communication numérique" en lien avec la Corsica Games Week. Il représente l'architecture logique du projet sous forme de diagramme PERT, permettant de visualiser les dépendances entre les tâches et d'établir l'ordre d'exécution nécessaire à la réalisation d'un audit de communication numérique.</p>
+                <p>Le diagramme organise les activités selon une hiérarchie claire, partant du nœud A pour se déployer en branches interconnectées (B, C, D, E, F) puis converger vers les étapes finales. Chaque tâche est positionnée stratégiquement pour identifier le chemin critique du projet et optimiser la planification temporelle. Cette structuration complexe permet de déterminer quelles tâches doivent impérativement être accomplies avant d'entamer les suivantes, garantissant ainsi une gestion efficace des ressources et des délais.</p>
+                <p>Bien que la SAE complète incluait également un diagramme de GANTT, j'ai choisi de présenter le plan des tâches car il représente le travail le plus exigeant et complexe du projet.</p>
+                <p>Cette réalisation m'a valu une note de 19,60/20, témoignant de la rigueur apportée à la planification et à la gestion de ce projet de communication numérique.</p>
+               <h2>Application utilisée</h2>
+                <div class="project-tools">
+                    <div class="tool-badge">
+                        <img src="figma.svg" alt="Figma">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail" id="detail-halo">
+        <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
+        <h2 class="section-title visible">HALO - CULTURE ARTISTIQUE</h2>
+        <div class="project-detail-content">
+            <img src="halo.png" alt="Halo" class="project-detail-image">
+            <div class="project-detail-info">
+                <h2>Halo</h2>
+                <p>Dans le cadre d'un devoir sur Photoshop, j'ai conçu l'identité visuelle complète d'un parfum : son nom, sa baseline et son affiche. J'ai choisi un flacon classique, inspiré des grandes maisons de parfumerie, symbole d'élégance intemporelle.</p>
+                <p>Le parfum se nomme Halo, un mot court et mémorable qui évoque la lumière, la pureté et une aura délicate. La baseline "Le parfum d'une fleur capturé dans une lueur" prolonge cet univers lumineux et floral.</p>
+                <p>L'affiche repose sur une palette de roses et de tons pêche, renforçant la féminité et la douceur du parfum. La bouteille, placée en diagonale, semble flotter parmi des pétales en mouvement, créant une sensation de légèreté et de dynamisme. Le lettrage monumental structure l'arrière-plan et affirme le positionnement premium, tandis que les typographies Basteleur et Montserrat Alternates assurent élégance et lisibilité.</p>
+                <p>L'ensemble des choix graphiques vise à transmettre un univers lumineux, raffiné et poétique, fidèle aux codes du parfum de luxe.</p>
+                <h2>Application utilisée</h2>
+                <div class="project-tools">
+                    <div class="tool-badge">
+                        <img src="photoshop.png" alt="Photoshop">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail" id="detail-creator">
+        <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
+        <h2 class="section-title visible">CREATOR HIGHLIGHTS - INTÉGRATION</h2>
+        <div class="project-detail-content">
+            <img src="creator.png" alt="Creator" class="project-detail-image">
+            <div class="project-detail-info">
+                <h2>Creator Highlights</h2>
+                <p>Ce projet web a été développé dans le cadre d'un exercice d'intégration sur Visual Studio Code. L'objectif était de créer un site présentant les top créateurs de contenu classés par catégories : musique, gaming, lifestyle, art & design.</p>
+                <p>Le site met en avant des profils de créateurs avec leurs statistiques clés, comme Bella Poarch dans la section musique, affichant ses 11,8 millions d'abonnés et 3,5 millions de vues moyennes. L'interface permet de naviguer entre les différents pôles créatifs et de découvrir d'autres créateurs en défilant vers le bas.</p>
+               <p>Bien que ce projet ne soit pas parfait, il représente l'une de mes meilleures réalisations en intégration web. L'exercice m'a permis de travailler sur la structure HTML, le style CSS et l'organisation de contenu pour créer une expérience utilisateur cohérente. Ce travail illustre ma capacité à transformer une maquette en site fonctionnel tout en respectant une hiérarchie visuelle claire.</p>
+               <h2>Applications utilisées</h2>
+               <div class="project-tools">
+                    <div class="tool-badge">
+                        <img src="HTML.png" alt="HTML">
+                    </div>
+                    <div class="tool-badge">
+                        <img src="CSS.png" alt="CSS">
+                    </div>
+                    <div class="tool-badge">
+                        <img src="visualcode.png" alt="Visual Studio Code">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail" id="detail-joyca">
+        <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
+        <h2 class="section-title visible">JOYCA - CULTURE ARTISTIQUE</h2>
+        <div class="project-detail-content">
+            <img src="joyca.png" alt="Joyca" class="project-detail-image">
+            <div class="project-detail-info">
+                <h2>Joyca</h2>
+                <p>Dans le cadre du cours de culture artistique, j'ai réalisé un portrait afin d'apprendre les bases d'Illustrator et la prise en main de ses outils. J'ai choisi de représenter le youtubeur Joyca pour cet exercice.</p>
+                <p>Le projet a été décliné en deux versions : une illustration vectorielle simplifiée et une version plus détaillée réalisée à l'aide de l'outil plume et de différents outils d'Illustrator. Ce travail m'a permis de développer ma précision, la gestion des formes vectorielles, des proportions du visage et des couleurs.</p>
+                <p>La principale difficulté a été de retranscrire les traits et l'expression du visage tout en conservant une cohérence graphique. Ce projet m'a également appris à simplifier une image tout en restant fidèle au modèle.</p>
+                <p>Ce travail a été évalué 15/20.</p>
+               <h2>Application utilisée</h2>
+                <div class="project-tools">
+                    <div class="tool-badge">
+                        <img src="Illustrator.png" alt="Illustrator">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail" id="detail-cgw">
+        <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
+        <h2 class="section-title visible">CGW - CULTURE ARTISTIQUE</h2>
+        <div class="project-detail-content">
+            <img src="cgw.png" alt="CGW" class="project-detail-image">
+            <div class="project-detail-info">
+                <h2>Corsica Games Week</h2>
+                <p>Ce projet a été réalisé dans le cadre d’une SAE, dont l’objectif était de concevoir les éléments d’une communication visuelle complète. J’ai réalisé l’affiche de la Corsica Games Week 2026, un festival dédié au jeu vidéo.</p>
+                <p>Le thème imposé étant le rétro, j’ai construit un univers graphique inspiré de la culture gaming et des jeux emblématiques. Les personnages iconiques permettent une identification immédiate et renforcent l’aspect nostalgique de l’événement.</p>
+                <p>J’ai également conçu le logo Corsica Games Week, volontairement simple et lisible afin d’assurer une reconnaissance rapide et une utilisation efficace sur différents supports de communication.</p>
+                <p>L’affiche respecte les codes de l’événementiel : hiérarchie claire de l’information, couleurs dynamiques et composition centrée sur l’impact visuel. Ce projet m’a permis de travailler la cohérence graphique, la lisibilité et l’adaptation d’un visuel à un public ciblé.</p>
+                <h2>Applications utilisées</h2>
+                <div class="project-tools">
+                    <div class="tool-badge">
+                        <img src="photoshop.png" alt="Photoshop">
+                    </div>
+                    <div class="tool-badge">
+                        <img src="Illustrator.png" alt="Illustrator">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="project-detail" id="detail-f2f">
+        <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
+        <h2 class="section-title visible">FACE 2 FACE - IDENTITÉ VISUELLE</h2>
+        <div class="project-detail-content">
+            <img src="F2F.png" alt="Face 2 Face" class="project-detail-image">
+            <div class="project-detail-info">
+                <h2>Face 2 Face</h2>
+                <p>Ce projet consiste en la création d’un logo pour une chaîne d’interviews, réalisée dans le cadre du cours de Production Audio et Vidéo. Ce logo accompagne les contenus vidéo et représente l’identité visuelle de la chaîne.</p>
+                <p>Le nom Face 2 Face fait directement référence au format de l’interview. Le logo joue sur la typographie et la superposition du chiffre 2, symbole de la rencontre et de la confrontation des points de vue.</p>
+                <p>Deux versions du logo ont été conçues afin de s’adapter aux différents usages. Une version complète, avec le nom typographique, est destinée aux supports de communication et aux visuels fixes. Une version simplifiée, sous forme de monogramme, est utilisée pour les vidéos, les réseaux sociaux ou les petits formats, garantissant lisibilité et reconnaissance.</p>
+                <p>Le style graphique est volontairement simple, moderne et percutant, avec une couleur forte qui affirme l’identité de la chaîne. Ce projet m’a permis de travailler la cohérence visuelle et l’adaptabilité d’un logo à différents supports audiovisuels.</p>
+               <h2>Applications utilisées</h2>
+                <div class="project-tools">
+                    <div class="tool-badge">
+                        <img src="Illustrator.png" alt="Illustrator">
+                    </div>
+                    <div class="tool-badge">
+                        <img src="photoshop.png" alt="Photoshop">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <!-- Contact Section -->
+    <section class="section" id="contact">
+        <h2 class="section-title">ME CONTACTER</h2>
+        <div class="contact-wrapper">
+            <div class="contact-left">
+                <!-- Section Contact -->
+                <div>
+                    <h3 class="contact-section-title">📞 Contact</h3>
+                    <div class="contact-top-row">
+                        <div class="contact-info-col">
+                            <div class="contact-item">
+                                <h4>📧 Email</h4>
+                                <a href="mailto:delboccioambre@gmail.com">delboccioambre@gmail.com</a>
+                            </div>
+                            <div class="contact-item">
+                                <h4>📱 Téléphone</h4>
+                                <p>06 29 19 07 41</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-map">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92589.64071879407!2d9.091618!3d42.306396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d736a236bd8cb5%3A0x40819a5fd970a20!2s20250%20Corte%2C%20France!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" allowfullscreen loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Séparateur -->
+                <div class="contact-separator"></div>
+                
+                <!-- Section Réseaux Sociaux -->
+                <div>
+                    <h3 class="contact-section-title">🌐 Réseaux Sociaux</h3>
+                    <div class="contact-bottom-row">
+                        <div class="contact-item">
+                            <h4>📷 Instagram</h4>
+                            <a href="https://instagram.com/ambree.dlb" target="_blank">@ambree.dlb</a>
+                        </div>
+                        <div class="contact-item">
+                            <h4>🎵 TikTok</h4>
+                            <a href="https://tiktok.com/@ambree.dlb" target="_blank">@ambree.dlb</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="contact-form" id="contactForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>FIRSTNAME</label>
+                        <input type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label>LASTNAME</label>
+                        <input type="text" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>EMAIL</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>MESSAGE</label>
+                    <textarea required></textarea>
+                </div>
+                <button type="submit" class="submit-btn"><span>SEND</span></button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 AMBRE DEL BOCCIO</p>
+        <p>Mentions Légales</p>
+        <p>MMI</p>
+    </footer>
+
+    <script>
+        // Curseur personnalisé
+        const cursor = document.querySelector('.custom-cursor');
+        const cursorFollower = document.querySelector('.cursor-follower');
+        
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+            
+            setTimeout(() => {
+                cursorFollower.style.left = e.clientX + 'px';
+                cursorFollower.style.top = e.clientY + 'px';
+            }, 100);
+        });
+
+        // Effet hover sur éléments cliquables
+        const hoverElements = document.querySelectorAll('a, button, .project-card, .skill-badge, .nav-item');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
+            el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
+        });
+
+        // Lecteur audio avec autoplay au clic
+        const audio = document.getElementById('bgMusic');
+        const playBtn = document.getElementById('playBtn');
+        const volumeBtn = document.getElementById('volumeBtn');
+        const volumeControl = document.getElementById('volumeControl');
+        const volumeBar = document.getElementById('volumeBar');
+        let isPlaying = false;
+
+        audio.volume = 0.7;
+
+        // Fonction pour démarrer la musique
+        function startMusic() {
+            audio.play().then(() => {
+                isPlaying = true;
+                playBtn.textContent = '⏸';
+                playBtn.classList.add('playing');
+            }).catch(error => {
+                console.log('Lecture automatique bloquée', error);
+            });
+        }
+
+        // Démarrer la musique au premier clic sur la page
+        document.body.addEventListener('click', function initAudio() {
+            startMusic();
+            document.body.removeEventListener('click', initAudio);
+        }, { once: true });
+
+        playBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                audio.pause();
+                playBtn.textContent = '▶';
+                playBtn.classList.remove('playing');
+            } else {
+                audio.play();
+                playBtn.textContent = '⏸';
+                playBtn.classList.add('playing');
+            }
+            isPlaying = !isPlaying;
+        });
+
+        volumeBtn.addEventListener('click', () => {
+            if (audio.volume > 0) {
+                audio.volume = 0;
+                volumeBar.style.width = '0%';
+                volumeBtn.textContent = '🔇';
+            } else {
+                audio.volume = 0.7;
+                volumeBar.style.width = '70%';
+                volumeBtn.textContent = '🔊';
+            }
+        });
+
+        volumeControl.addEventListener('click', (e) => {
+            const rect = volumeControl.getBoundingClientRect();
+            const percent = (e.clientX - rect.left) / rect.width;
+            audio.volume = percent;
+            volumeBar.style.width = (percent * 100) + '%';
+        });
+
+        // Animations au scroll
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.section-title, .about-image, .about-cards, .timeline-circle, .skill-badge, .project-card').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Particules
+        const particlesContainer = document.getElementById('particles');
+        for (let i = 0; i < 100; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDelay = Math.random() * 20 + 's';
+            particle.style.animationDuration = (Math.random() * 15 + 15) + 's';
+            particlesContainer.appendChild(particle);
+        }
+
+        // Navigation vers les détails des projets
+        const projectCards = document.querySelectorAll('.project-card');
+        const projectDetails = document.querySelectorAll('.project-detail');
+        const sections = document.querySelectorAll('.section, .hero');
+
+        projectCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const projectId = card.getAttribute('data-project');
+                const detailPage = document.getElementById('detail-' + projectId);
+                
+                if (detailPage) {
+                    sections.forEach(s => s.style.display = 'none');
+                    projectDetails.forEach(p => p.classList.remove('active'));
+                    detailPage.classList.add('active');
+                    window.scrollTo(0, 0);
+                }
+            });
+        });
+
+        // Retour aux projets
+        function backToProjects() {
+            projectDetails.forEach(p => p.classList.remove('active'));
+            sections.forEach(s => s.style.display = '');
+            document.getElementById('projets').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Formulaire
+        document.getElementById('contactForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
+            e.target.reset();
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
