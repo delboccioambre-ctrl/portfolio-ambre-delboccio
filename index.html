@@ -4,7 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ambre Del Boccio - Portfolio</title>
-   <link rel="stylesheet" href="style.css">
+    
+    <!-- Préconnexion aux domaines externes -->
+    <link rel="preconnect" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://www.google.com">
+    
+    <!-- Précharge de l'image principale -->
+    <link rel="preload" as="image" href="ambrephoto.webp" fetchpriority="high">
+    
+    <!-- CSS critique inline (minimal pour le rendu initial) -->
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; }
+        .sticky-nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(0,0,0,0.9); }
+    </style>
+    
+    <!-- CSS principal en chargement différé -->
+    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 <body>
     <!-- Menu Sticky CSS Pure -->
@@ -23,6 +40,7 @@
     <!-- Particules -->
     <div class="particles" id="particles"></div>
 
+
     <!-- Lecteur audio -->
     <div class="audio-player">
         <div class="audio-controls">
@@ -32,11 +50,12 @@
                 <div class="volume-bar" id="volumeBar"></div>
             </div>
         </div>
-        <audio id="bgMusic" loop preload="auto">
+        <audio id="bgMusic" loop preload="none">
             <source src="Bleu-Azur.mp3" type="audio/mpeg">
             Votre navigateur ne supporte pas l'audio HTML5.
         </audio>
     </div>
+
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -57,12 +76,13 @@
         </div>
     </section>
 
+
     <!-- About Section -->
     <section class="section" id="about">
         <h2 class="section-title">ABOUT ME</h2>
         <div class="about-container">
             <div class="about-image">
-                <img src="ambrephoto.png" alt="Ambre Del Boccio">
+                <img src="ambrephoto.webp" alt="Ambre Del Boccio" width="400" height="400" fetchpriority="high">
             </div>
             <div class="about-cards">
                 <div class="about-card">
@@ -88,7 +108,8 @@
         </div>
     </section>
 
-    <!-- Parcours Section -->
+
+     <!-- Parcours Section -->
     <section class="section" id="parcours">
         <h2 class="section-title">MON PARCOURS</h2>
         <div class="parcours-timeline">
@@ -126,49 +147,49 @@
                     <h3>PHOTOSHOP</h3>
                     <div class="skill-stars">★★★☆☆</div>
                 </div>
-                <div class="skill-icon"><img src="photoshop.png" alt="Photoshop"></div>
+                <div class="skill-icon"><img src="photoshop.webp" alt="Photoshop"></div>
             </div>
             <div class="skill-badge">
                 <div class="skill-info">
                     <h3>PREMIÈRE PRO</h3>
                     <div class="skill-stars">★★★★☆</div>
                 </div>
-                <div class="skill-icon"><img src="premierepro.svg.png" alt="Première Pro"></div>
+                <div class="skill-icon"><img src="premierepro.svg.webp" alt="Première Pro"></div>
             </div>
             <div class="skill-badge">
                 <div class="skill-info">
                     <h3>ILLUSTRATOR</h3>
                     <div class="skill-stars">★★★☆☆</div>
                 </div>
-                <div class="skill-icon"><img src="Illustrator.png" alt="Illustrator"></div>
+                <div class="skill-icon"><img src="Illustrator.webp" alt="Illustrator"></div>
             </div>
             <div class="skill-badge">
                 <div class="skill-info">
                     <h3>HTML</h3>
                     <div class="skill-stars">★★★★☆</div>
                 </div>
-                <div class="skill-icon"><img src="HTML.png" alt="HTML"></div>
+                <div class="skill-icon"><img src="HTML.webp" alt="HTML"></div>
             </div>
             <div class="skill-badge">
                 <div class="skill-info">
                     <h3>CSS</h3>
                     <div class="skill-stars">★★★★☆</div>
                 </div>
-                <div class="skill-icon"><img src="CSS.png" alt="CSS"></div>
+                <div class="skill-icon"><img src="CSS.webp" alt="CSS"></div>
             </div>
             <div class="skill-badge">
                 <div class="skill-info">
                     <h3>VISUAL CODE</h3>
                     <div class="skill-stars">★★★☆☆</div>
                 </div>
-                <div class="skill-icon"><img src="visualcode.png" alt="Visual Studio Code"></div>
+                <div class="skill-icon"><img src="visualcode.webp" alt="Visual Studio Code"></div>
             </div>
             <div class="skill-badge">
                 <div class="skill-info">
                     <h3>FIGMA</h3>
                     <div class="skill-stars">★★★★☆</div>
                 </div>
-                <div class="skill-icon"><img src="figma.svg" alt="Figma"></div>
+                <div class="skill-icon"><img src="figma.webp" alt="Figma"></div>
             </div>
         </div>
     </section>
@@ -239,7 +260,7 @@
         <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
         <h2 class="section-title visible">PLAN DES TÂCHES - GESTION DE PROJET</h2>
         <div class="project-detail-content">
-            <img src="plandestaches.png" alt="Plan des tâches" class="project-detail-image">
+            <img src="plandestaches.webp" alt="Plan des tâches" class="project-detail-image">
             <div class="project-detail-info">
                 <h2>Plan des tâches</h2>
                 <p>Ce plan des tâches a été élaboré dans le cadre d'une SAE "Gérer un projet de communication numérique" en lien avec la Corsica Games Week. Il représente l'architecture logique du projet sous forme de diagramme PERT, permettant de visualiser les dépendances entre les tâches et d'établir l'ordre d'exécution nécessaire à la réalisation d'un audit de communication numérique.</p>
@@ -249,7 +270,7 @@
                <h2>Application utilisée</h2>
                 <div class="project-tools">
                     <div class="tool-badge">
-                        <img src="figma.svg" alt="Figma">
+                        <img src="figma.webp" alt="Figma">
                     </div>
                 </div>
             </div>
@@ -260,7 +281,7 @@
         <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
         <h2 class="section-title visible">HALO - CULTURE ARTISTIQUE</h2>
         <div class="project-detail-content">
-            <img src="halo.png" alt="Halo" class="project-detail-image">
+            <img src="halo.webp" alt="Halo" class="project-detail-image">
             <div class="project-detail-info">
                 <h2>Halo</h2>
                 <p>Dans le cadre d'un devoir sur Photoshop, j'ai conçu l'identité visuelle complète d'un parfum : son nom, sa baseline et son affiche. J'ai choisi un flacon classique, inspiré des grandes maisons de parfumerie, symbole d'élégance intemporelle.</p>
@@ -270,7 +291,7 @@
                 <h2>Application utilisée</h2>
                 <div class="project-tools">
                     <div class="tool-badge">
-                        <img src="photoshop.png" alt="Photoshop">
+                        <img src="photoshop.webp" alt="Photoshop">
                     </div>
                 </div>
             </div>
@@ -281,7 +302,7 @@
         <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
         <h2 class="section-title visible">CREATOR HIGHLIGHTS - INTÉGRATION</h2>
         <div class="project-detail-content">
-            <img src="creator.png" alt="Creator" class="project-detail-image">
+            <img src="creator.webp" alt="Creator" class="project-detail-image">
             <div class="project-detail-info">
                 <h2>Creator Highlights</h2>
                 <p>Ce projet web a été développé dans le cadre d'un exercice d'intégration sur Visual Studio Code. L'objectif était de créer un site présentant les top créateurs de contenu classés par catégories : musique, gaming, lifestyle, art & design.</p>
@@ -290,13 +311,13 @@
                <h2>Applications utilisées</h2>
                <div class="project-tools">
                     <div class="tool-badge">
-                        <img src="HTML.png" alt="HTML">
+                        <img src="HTML.webp" alt="HTML">
                     </div>
                     <div class="tool-badge">
-                        <img src="CSS.png" alt="CSS">
+                        <img src="CSS.webp" alt="CSS">
                     </div>
                     <div class="tool-badge">
-                        <img src="visualcode.png" alt="Visual Studio Code">
+                        <img src="visualcode.webp" alt="Visual Studio Code">
                     </div>
                 </div>
             </div>
@@ -307,7 +328,7 @@
         <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
         <h2 class="section-title visible">JOYCA - CULTURE ARTISTIQUE</h2>
         <div class="project-detail-content">
-            <img src="joyca.png" alt="Joyca" class="project-detail-image">
+            <img src="joyca.webp" alt="Joyca" class="project-detail-image">
             <div class="project-detail-info">
                 <h2>Joyca</h2>
                 <p>Dans le cadre du cours de culture artistique, j'ai réalisé un portrait afin d'apprendre les bases d'Illustrator et la prise en main de ses outils. J'ai choisi de représenter le youtubeur Joyca pour cet exercice.</p>
@@ -317,7 +338,7 @@
                <h2>Application utilisée</h2>
                 <div class="project-tools">
                     <div class="tool-badge">
-                        <img src="Illustrator.png" alt="Illustrator">
+                        <img src="Illustrator.webp" alt="Illustrator">
                     </div>
                 </div>
             </div>
@@ -328,7 +349,7 @@
         <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
         <h2 class="section-title visible">CGW - CULTURE ARTISTIQUE</h2>
         <div class="project-detail-content">
-            <img src="cgw.png" alt="CGW" class="project-detail-image">
+            <img src="cgw.webp" alt="CGW" class="project-detail-image">
             <div class="project-detail-info">
                 <h2>Corsica Games Week</h2>
                 <p>Ce projet a été réalisé dans le cadre d’une SAE, dont l’objectif était de concevoir les éléments d’une communication visuelle complète. J’ai réalisé l’affiche de la Corsica Games Week 2026, un festival dédié au jeu vidéo.</p>
@@ -338,10 +359,10 @@
                 <h2>Applications utilisées</h2>
                 <div class="project-tools">
                     <div class="tool-badge">
-                        <img src="photoshop.png" alt="Photoshop">
+                        <img src="photoshop.webp" alt="Photoshop">
                     </div>
                     <div class="tool-badge">
-                        <img src="Illustrator.png" alt="Illustrator">
+                        <img src="Illustrator.webp" alt="Illustrator">
                     </div>
                 </div>
             </div>
@@ -352,7 +373,7 @@
         <button class="back-button" onclick="backToProjects()">← RETOUR AUX PROJETS</button>
         <h2 class="section-title visible">FACE 2 FACE - IDENTITÉ VISUELLE</h2>
         <div class="project-detail-content">
-            <img src="F2F.png" alt="Face 2 Face" class="project-detail-image">
+            <img src="F2F.webp" alt="Face 2 Face" class="project-detail-image">
             <div class="project-detail-info">
                 <h2>Face 2 Face</h2>
                 <p>Ce projet consiste en la création d’un logo pour une chaîne d’interviews, réalisée dans le cadre du cours de Production Audio et Vidéo. Ce logo accompagne les contenus vidéo et représente l’identité visuelle de la chaîne.</p>
@@ -362,17 +383,19 @@
                <h2>Applications utilisées</h2>
                 <div class="project-tools">
                     <div class="tool-badge">
-                        <img src="Illustrator.png" alt="Illustrator">
+                        <img src="Illustrator.webp" alt="Illustrator">
                     </div>
                     <div class="tool-badge">
-                        <img src="photoshop.png" alt="Photoshop">
+                        <img src="photoshop.webp" alt="Photoshop">
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
+
     
+
 
     <!-- Contact Section -->
     <section class="section" id="contact">
@@ -395,7 +418,13 @@
                         </div>
                         
                         <div class="contact-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92589.64071879407!2d9.091618!3d42.306396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d736a236bd8cb5%3A0x40819a5fd970a20!2s20250%20Corte%2C%20France!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" allowfullscreen loading="lazy"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92589.64071879407!2d9.091618!3d42.306396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d736a236bd8cb5%3A0x40819a5fd970a20!2s20250%20Corte%2C%20France!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
+                                    width="600" 
+                                    height="450"
+                                    style="border:0;" 
+                                    allowfullscreen 
+                                    loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
                         </div>
                     </div>
                 </div>
@@ -409,11 +438,11 @@
                     <div class="contact-bottom-row">
                         <div class="contact-item">
                             <h4>📷 Instagram</h4>
-                            <a href="https://instagram.com/ambree.dlb" target="_blank">@ambree.dlb</a>
+                            <a href="https://instagram.com/ambree.dlb" target="_blank" rel="noopener">@ambree.dlb</a>
                         </div>
                         <div class="contact-item">
                             <h4>🎵 TikTok</h4>
-                            <a href="https://tiktok.com/@ambree.dlb" target="_blank">@ambree.dlb</a>
+                            <a href="https://tiktok.com/@ambree.dlb" target="_blank" rel="noopener">@ambree.dlb</a>
                         </div>
                     </div>
                 </div>
@@ -442,6 +471,7 @@
         </div>
     </section>
 
+
     <!-- Footer -->
     <footer>
         <p>© 2025 AMBRE DEL BOCCIO</p>
@@ -449,7 +479,8 @@
         <p>MMI</p>
     </footer>
 
-    <script>
+
+    <script defer>
         // Curseur personnalisé
         const cursor = document.querySelector('.custom-cursor');
         const cursorFollower = document.querySelector('.cursor-follower');
@@ -464,12 +495,14 @@
             }, 100);
         });
 
+
         // Effet hover sur éléments cliquables
         const hoverElements = document.querySelectorAll('a, button, .project-card, .skill-badge, .nav-item');
         hoverElements.forEach(el => {
             el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
             el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
         });
+
 
         // Lecteur audio avec autoplay au clic
         const audio = document.getElementById('bgMusic');
@@ -479,7 +512,9 @@
         const volumeBar = document.getElementById('volumeBar');
         let isPlaying = false;
 
+
         audio.volume = 0.7;
+
 
         // Fonction pour démarrer la musique
         function startMusic() {
@@ -492,11 +527,13 @@
             });
         }
 
+
         // Démarrer la musique au premier clic sur la page
         document.body.addEventListener('click', function initAudio() {
             startMusic();
             document.body.removeEventListener('click', initAudio);
         }, { once: true });
+
 
         playBtn.addEventListener('click', () => {
             if (isPlaying) {
@@ -511,6 +548,7 @@
             isPlaying = !isPlaying;
         });
 
+
         volumeBtn.addEventListener('click', () => {
             if (audio.volume > 0) {
                 audio.volume = 0;
@@ -523,6 +561,7 @@
             }
         });
 
+
         volumeControl.addEventListener('click', (e) => {
             const rect = volumeControl.getBoundingClientRect();
             const percent = (e.clientX - rect.left) / rect.width;
@@ -530,11 +569,13 @@
             volumeBar.style.width = (percent * 100) + '%';
         });
 
+
         // Animations au scroll
         const observerOptions = {
             threshold: 0.2,
             rootMargin: '0px'
         };
+
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -544,9 +585,11 @@
             });
         }, observerOptions);
 
+
         document.querySelectorAll('.section-title, .about-image, .about-cards, .timeline-circle, .skill-badge, .project-card').forEach(el => {
             observer.observe(el);
         });
+
 
         // Particules
         const particlesContainer = document.getElementById('particles');
@@ -559,10 +602,12 @@
             particlesContainer.appendChild(particle);
         }
 
+
         // Navigation vers les détails des projets
         const projectCards = document.querySelectorAll('.project-card');
         const projectDetails = document.querySelectorAll('.project-detail');
         const sections = document.querySelectorAll('.section, .hero');
+
 
         projectCards.forEach(card => {
             card.addEventListener('click', () => {
@@ -578,6 +623,7 @@
             });
         });
 
+
         // Retour aux projets
         function backToProjects() {
             projectDetails.forEach(p => p.classList.remove('active'));
@@ -585,12 +631,14 @@
             document.getElementById('projets').scrollIntoView({ behavior: 'smooth' });
         }
 
+
         // Formulaire
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
             e.target.reset();
         });
+
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
