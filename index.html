@@ -4,25 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ambre Del Boccio - Portfolio</title>
-    
-    <!-- Préconnexion aux domaines externes -->
-    <link rel="preconnect" href="https://www.google.com">
-    <link rel="dns-prefetch" href="https://www.google.com">
-    
-    <!-- Précharge de l'image principale -->
-    <link rel="preload" as="image" href="ambrephoto.webp" fetchpriority="high">
-    
-    <!-- CSS critique inline (minimal pour le rendu initial) -->
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: system-ui, -apple-system, sans-serif; overflow-x: hidden; }
-        .sticky-nav { position: fixed; top: 0; width: 100%; z-index: 1000; background: rgba(0,0,0,0.9); }
-    </style>
-    
-    <!-- CSS principal en chargement différé -->
-    <link rel="preload" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="style.css"></noscript>
+   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Menu Sticky CSS Pure -->
     <nav class="sticky-nav">
@@ -40,7 +24,6 @@
     <!-- Particules -->
     <div class="particles" id="particles"></div>
 
-
     <!-- Lecteur audio -->
     <div class="audio-player">
         <div class="audio-controls">
@@ -50,12 +33,11 @@
                 <div class="volume-bar" id="volumeBar"></div>
             </div>
         </div>
-        <audio id="bgMusic" loop preload="none">
+        <audio id="bgMusic" loop preload="auto">
             <source src="Bleu-Azur.mp3" type="audio/mpeg">
             Votre navigateur ne supporte pas l'audio HTML5.
         </audio>
     </div>
-
 
     <!-- Hero Section -->
     <section class="hero" id="home">
@@ -76,13 +58,12 @@
         </div>
     </section>
 
-
     <!-- About Section -->
     <section class="section" id="about">
         <h2 class="section-title">ABOUT ME</h2>
         <div class="about-container">
             <div class="about-image">
-                <img src="ambrephoto.webp" alt="Ambre Del Boccio" width="400" height="400" fetchpriority="high">
+                <img src="ambrephoto.webp" alt="Ambre Del Boccio">
             </div>
             <div class="about-cards">
                 <div class="about-card">
@@ -108,8 +89,7 @@
         </div>
     </section>
 
-
-     <!-- Parcours Section -->
+    <!-- Parcours Section -->
     <section class="section" id="parcours">
         <h2 class="section-title">MON PARCOURS</h2>
         <div class="parcours-timeline">
@@ -393,9 +373,7 @@
         </div>
     </div>
 
-
     
-
 
     <!-- Contact Section -->
     <section class="section" id="contact">
@@ -418,13 +396,7 @@
                         </div>
                         
                         <div class="contact-map">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92589.64071879407!2d9.091618!3d42.306396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d736a236bd8cb5%3A0x40819a5fd970a20!2s20250%20Corte%2C%20France!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" 
-                                    width="600" 
-                                    height="450"
-                                    style="border:0;" 
-                                    allowfullscreen 
-                                    loading="lazy"
-                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d92589.64071879407!2d9.091618!3d42.306396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12d736a236bd8cb5%3A0x40819a5fd970a20!2s20250%20Corte%2C%20France!5e0!3m2!1sfr!2sfr!4v1620000000000!5m2!1sfr!2sfr" allowfullscreen loading="lazy"></iframe>
                         </div>
                     </div>
                 </div>
@@ -438,39 +410,39 @@
                     <div class="contact-bottom-row">
                         <div class="contact-item">
                             <h4>📷 Instagram</h4>
-                            <a href="https://instagram.com/ambree.dlb" target="_blank" rel="noopener">@ambree.dlb</a>
+                            <a href="https://instagram.com/ambree.dlb" target="_blank">@ambree.dlb</a>
                         </div>
                         <div class="contact-item">
                             <h4>🎵 TikTok</h4>
-                            <a href="https://tiktok.com/@ambree.dlb" target="_blank" rel="noopener">@ambree.dlb</a>
+                            <a href="https://tiktok.com/@ambree.dlb" target="_blank">@ambree.dlb</a>
                         </div>
                     </div>
                 </div>
             </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-row">
-                    <div class="form-group">
-                        <label>FIRSTNAME</label>
-                        <input type="text" required>
-                    </div>
-                    <div class="form-group">
-                        <label>LASTNAME</label>
-                        <input type="text" required>
-                    </div>
+            <!-- ✅ NOUVEAU FORMULAIRE AVEC IDs -->
+        <form class="contact-form" id="contactForm">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="firstname">FIRSTNAME</label>
+                    <input type="text" id="firstname" name="firstname" required>
                 </div>
                 <div class="form-group">
-                    <label>EMAIL</label>
-                    <input type="email" required>
+                    <label for="lastname">LASTNAME</label>
+                    <input type="text" id="lastname" name="lastname" required>
                 </div>
-                <div class="form-group">
-                    <label>MESSAGE</label>
-                    <textarea required></textarea>
-                </div>
-                <button type="submit" class="submit-btn"><span>SEND</span></button>
-            </form>
-        </div>
-    </section>
-
+            </div>
+            <div class="form-group">
+                <label for="email">EMAIL</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">MESSAGE</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="submit-btn"><span>SEND</span></button>
+        </form>
+    </div>
+</section>
 
     <!-- Footer -->
     <footer>
@@ -479,8 +451,7 @@
         <p>MMI</p>
     </footer>
 
-
-    <script defer>
+    <script>
         // Curseur personnalisé
         const cursor = document.querySelector('.custom-cursor');
         const cursorFollower = document.querySelector('.cursor-follower');
@@ -495,14 +466,12 @@
             }, 100);
         });
 
-
         // Effet hover sur éléments cliquables
         const hoverElements = document.querySelectorAll('a, button, .project-card, .skill-badge, .nav-item');
         hoverElements.forEach(el => {
             el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
             el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
         });
-
 
         // Lecteur audio avec autoplay au clic
         const audio = document.getElementById('bgMusic');
@@ -512,9 +481,7 @@
         const volumeBar = document.getElementById('volumeBar');
         let isPlaying = false;
 
-
         audio.volume = 0.7;
-
 
         // Fonction pour démarrer la musique
         function startMusic() {
@@ -527,13 +494,11 @@
             });
         }
 
-
         // Démarrer la musique au premier clic sur la page
         document.body.addEventListener('click', function initAudio() {
             startMusic();
             document.body.removeEventListener('click', initAudio);
         }, { once: true });
-
 
         playBtn.addEventListener('click', () => {
             if (isPlaying) {
@@ -548,7 +513,6 @@
             isPlaying = !isPlaying;
         });
 
-
         volumeBtn.addEventListener('click', () => {
             if (audio.volume > 0) {
                 audio.volume = 0;
@@ -561,7 +525,6 @@
             }
         });
 
-
         volumeControl.addEventListener('click', (e) => {
             const rect = volumeControl.getBoundingClientRect();
             const percent = (e.clientX - rect.left) / rect.width;
@@ -569,13 +532,11 @@
             volumeBar.style.width = (percent * 100) + '%';
         });
 
-
         // Animations au scroll
         const observerOptions = {
             threshold: 0.2,
             rootMargin: '0px'
         };
-
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
@@ -585,11 +546,9 @@
             });
         }, observerOptions);
 
-
         document.querySelectorAll('.section-title, .about-image, .about-cards, .timeline-circle, .skill-badge, .project-card').forEach(el => {
             observer.observe(el);
         });
-
 
         // Particules
         const particlesContainer = document.getElementById('particles');
@@ -602,12 +561,10 @@
             particlesContainer.appendChild(particle);
         }
 
-
         // Navigation vers les détails des projets
         const projectCards = document.querySelectorAll('.project-card');
         const projectDetails = document.querySelectorAll('.project-detail');
         const sections = document.querySelectorAll('.section, .hero');
-
 
         projectCards.forEach(card => {
             card.addEventListener('click', () => {
@@ -623,7 +580,6 @@
             });
         });
 
-
         // Retour aux projets
         function backToProjects() {
             projectDetails.forEach(p => p.classList.remove('active'));
@@ -631,14 +587,12 @@
             document.getElementById('projets').scrollIntoView({ behavior: 'smooth' });
         }
 
-
         // Formulaire
         document.getElementById('contactForm').addEventListener('submit', (e) => {
             e.preventDefault();
             alert('Merci pour votre message ! Je vous répondrai dans les plus brefs délais.');
             e.target.reset();
         });
-
 
         // Smooth scroll
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
