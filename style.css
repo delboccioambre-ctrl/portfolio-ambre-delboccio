@@ -1484,3 +1484,40 @@
         font-size: 12px;
     }
 }
+
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #1a1a1a;
+            --beige: #f5ebe0;
+            --purple-dark: #6b3e52;
+            --purple-light: #715663;
+            --accent-color: #ff6b6b;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Impact', 'Arial Black', sans-serif;
+            background: var(--beige);
+            color: var(--primary-color);
+            overflow-x: hidden;
+        }
+
+        
+        /* Lecteur audio */
+        .audio-player {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: var(--purple-dark);
+            padding: 15px 20px;
+            border-radius: 50px;
+            z-index: 1000;
+             }
